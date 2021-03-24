@@ -1,4 +1,5 @@
 ﻿using SimpleAuthExampleUWP.ViewModel;
+using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
@@ -20,5 +21,10 @@ namespace SimpleAuthExampleUWP
         }
 
         public MainPageViewModel ViewModel { get; }
+
+        private void OnLoginButtonClick(object sender, RoutedEventArgs e)
+        {
+            ViewModel.UpdateLoginNotification();
+        }
     }
 }

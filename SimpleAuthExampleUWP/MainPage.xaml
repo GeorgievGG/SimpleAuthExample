@@ -14,17 +14,21 @@
                     VerticalAlignment="Center">
             <TextBox x:Name="UsernameBox"
                      BorderThickness="1"
+                     Text="{x:Bind ViewModel.Username, Mode=TwoWay}"
                      Width="200"
                      Height="40"
                      PlaceholderText="Your username" />
             <PasswordBox x:Name="PasswordBox"
                      BorderThickness="1"
+                     Password="{x:Bind ViewModel.Password, Mode=TwoWay}"
                      Width="200"
                      Height="40" />
             <Button x:Name="LoginButton"
                     Content="Login"
+                    Click="OnLoginButtonClick"
                     Height="40"
                     Width="200" />
+            <TextBlock Text="{x:Bind ViewModel.LoginNotification, Mode=OneWay}" />
         </StackPanel>
     </Grid>
 </Page>
